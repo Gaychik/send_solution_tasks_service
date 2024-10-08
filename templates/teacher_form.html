@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа для преподавателя</title>
+</head>
+<body>
+    <h2>Загрузка списка студентов</h2>
+    <form id="uploadForm" action="/upload_students" method="POST" enctype="multipart/form-data">
+        <label for="group">Название группы:</label><br>
+        <input type="text" id="group" name="group" required><br>
+        <label for="chat_id">ID чата в Telegram:</label><br>
+        <input type="text" id="chat_id" name="chat_id" required><br><br>
+        <label for="student_list">Загрузить список студентов (формат: имя-фамилия):</label>
+        <input type="file" id="student_list" name="student_list" accept=".txt" required><br><br>
+        <button type="submit">Загрузить</button>
+    </form>
+</body>
+</html>
